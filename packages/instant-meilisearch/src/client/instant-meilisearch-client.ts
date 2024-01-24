@@ -99,6 +99,7 @@ export function instantMeiliSearch(
       search: async function <T = Record<string, any>>(
         instantSearchRequests: readonly AlgoliaMultipleQueriesQuery[]
       ): Promise<{ results: Array<AlgoliaSearchResponse<T>> }> {
+        console.log("instantSearchRequests:=>> ", instantSearchRequests);
         try {
           const meilisearchRequests = []
           const instantSearchPagination: PaginationState[] = []
